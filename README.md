@@ -1,7 +1,5 @@
 # PAT- Simple Eventbased Webserver
 
-One Paragraph of project description goes here
-
 ## Mengukur Kinerja Web Server
 
 Pada tugas ini dilakukan dua percobaan yaitu melakukan 10.000 request konkuren sebuah dokumen HTML berukuran kurang lebih 500 bytes, dan dokumen HTML berukuran kurang lebih 20 KB. Percobaan dilakukan pada dua jenis server yaitu Web server Apache dan Web Server Nginx.
@@ -26,35 +24,18 @@ Maka untuk melakukan pengukuran kinerja pelayanan 10.000 request konkuren Apaceh
 ab -n 10000 -c 10000 http[s]://]hostname[:port]/path
 ```
 
-### Installing
+## Hasil Percobaan
 
-A step by step series of examples that tell you have to get a development env running
+Percobaan dilakukan pada lingkungan Ubuntu
 
-Say what the step will be
+### Apache2
 
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 500 bytes:
 
 ```
 Give an example
 ```
+Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
 
 ### And coding style tests
 
