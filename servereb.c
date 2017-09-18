@@ -7,7 +7,7 @@
 
 #define BUFFER_SIZE 1024
 
-int total_clients = 0;  // Total number of connected clients
+int total_clients = 0;
 int PORT_NO;
 
 void accept_cb(struct ev_loop *loop, struct ev_io *watcher, int revents);
@@ -179,6 +179,8 @@ void read_cb(struct ev_loop *loop, struct ev_io *watcher, int revents){
             printf("ret: %d\n", ret);
             (void)send(watcher->fd, buffer_html, strlen(buffer_html), 0);
           }
+
+          close(file_fd);
         }
       }
     }
