@@ -82,7 +82,7 @@ Untuk menjalankan server
 ./server [port] [lokasi file html] [& - menjalankan server sebagai background process]
 ```
 
-Pada percobaan ini, telah disediakan file untuk serving yaitu pada folder html yang berisi dua file HTML berukuran 500 bytes (index.html) dan 20kb (index2.html) sehingga pada defaultnya server dijalankan seperti berikut:
+Pada percobaan ini, telah disediakan file untuk serving yaitu pada folder html yang berisi dua file HTML berukuran 500 bytes (index.html) dan 20 KB (index2.html) sehingga pada defaultnya server dijalankan seperti berikut:
 
 ```
 ./server [port] ./html [& - menjalankan server sebagai background process]
