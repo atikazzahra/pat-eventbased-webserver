@@ -50,8 +50,8 @@ Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 500 b
 
 Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
 
-![alt text](image/20kblibev.png)
-![alt text](image/20kb-libev.png)
+![alt text](image/20kbnginx.png)
+![alt text](image/20kb-nginx.png)
 
 ### Simple Event-based Web Server 
 
