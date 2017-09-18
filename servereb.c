@@ -73,7 +73,8 @@ int main(int argc, char **argv){
   while (1){
     ev_loop(loop, 0);
   }
-  
+  // clean up
+  close(sd);
   return 0;
 }
 
@@ -111,6 +112,7 @@ void accept_cb(struct ev_loop *loop, struct ev_io *watcher, int revents){
 /* Read client message */
 void read_cb(struct ev_loop *loop, struct ev_io *watcher, int revents){
   char buffer[BUFFER_SIZE];
+  char buffer_html[BUFFER_SIZE];
   ssize_t evread;
   int j, file_fd, buflen, len;
   long i, ret;
@@ -122,6 +124,7 @@ void read_cb(struct ev_loop *loop, struct ev_io *watcher, int revents){
   }
 
   // Receive message from client socket
+  printf("reading from client:\n");
   evread = recv(watcher->fd, buffer, BUFFER_SIZE, 0);
 
   if(evread < 0)
@@ -133,63 +136,58 @@ void read_cb(struct ev_loop *loop, struct ev_io *watcher, int revents){
   if(evread == 0)
   {
     // Stop and free watchet if client socket is closing
-    ev_io_stop(loop,watcher);
-    close(watcher->fd);
-    free(watcher);
     perror("peer might closing");
-    total_clients --; // Decrement total_clients count
-    printf("%d client(s) connected.\n", total_clients);
-    return;
   }
   else
   {
     printf("message: %s\n", buffer);
+    
     for(i=0;i<evread;i++)  
       if(buffer[i] == '\r' || buffer[i] == '\n')
         buffer[i]='*';
     
-    if( strncmp(buffer,"GET ",4) && strncmp(buffer,"get ",4) )
-      return;
+    if( !strncmp(buffer,"GET ",4) || !strncmp(buffer,"get ",4) ){
+      for(i=4;i<BUFFER_SIZE;i++) { 
+        if(buffer[i] == ' ') { 
+          buffer[i] = 0;
+          break;
+        }
+      }
 
-    for(i=4;i<BUFFER_SIZE;i++) { 
-      if(buffer[i] == ' ') { 
-        buffer[i] = 0;
-        break;
+      if( !strncmp(&buffer[0],"GET /\0",6) || !strncmp(&buffer[0],"get /\0",6) ) 
+        (void)strcpy(buffer,"GET /index.html");
+
+      buflen = strlen(buffer);
+      if( strncmp(&buffer[buflen-4], "html", 4) != 0) {
+        printf("Unsupported media type\n");
+        (void)sprintf(buffer,"HTTP/1.0 415 Unsupported Media Type\n");
+        (void)send(watcher->fd, buffer, strlen(buffer), 0);
+      } else {
+        printf("file: %s\n", &buffer[5]);
+
+        if(( file_fd = open(&buffer[5], O_RDONLY)) == -1){
+          printf("file not found\n");
+          (void)sprintf(buffer,"HTTP/1.0 404 Not Found\n");
+          (void)send(watcher->fd, buffer, strlen(buffer), 0);
+        } else {
+          printf("file found\n");
+          (void)sprintf(buffer,"HTTP/1.0 200 OK\r\nContent-Type: text/html\r\n\r\n");
+          (void)send(watcher->fd, buffer, strlen(buffer), 0);
+
+          printf("sending file\n");
+          while ( (ret = read(file_fd, buffer_html, BUFFER_SIZE))>0 ){
+            printf("ret: %d\n", ret);
+            (void)send(watcher->fd, buffer_html, strlen(buffer_html), 0);
+          }
+        }
       }
     }
-    printf("message: %s\n", buffer);
-
-    for(j=0;j<i-1;j++)  
-      if(buffer[j] == '.' && buffer[j+1] == '.')
-        return;
-
-    if( !strncmp(&buffer[0],"GET /\0",6) || !strncmp(&buffer[0],"get /\0",6) ) 
-      (void)strcpy(buffer,"GET /index.html");
-
-    buflen = strlen(buffer);
-    if( strncmp(&buffer[buflen-4], "html", 4) != 0) {
-      return;
-    }
-
-    printf("file: %s\n", &buffer[5]);
-
-    if(( file_fd = open(&buffer[5], O_RDONLY)) == -1){
-       write(watcher->fd, "HTTP/1.0 404 Not Found\n", 23);
-       return;
-    }
-
-    (void)sprintf(buffer,"HTTP/1.0 200 OK\r\nContent-Type: text/html\r\n\r\n");
-    (void)send(watcher->fd, buffer, strlen(buffer), 0);
-
-    if ( (ret=read(file_fd, buffer, BUFFER_SIZE))>0 ){
-      write(watcher->fd, buffer, ret);
-    }
   }
-  return;
 
-  // Send message back to the client
-  // send(watcher->fd, buffer, read, 0);
-  //printf("finished");
-  bzero(buffer, read);
-  
+  ev_io_stop(loop,watcher);
+  close(watcher->fd);
+  free(watcher);
+  total_clients --;
+  printf("%d client(s) connected.\n", total_clients);
+  return;
 }
