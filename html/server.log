@@ -1,0 +1,13 @@
+ INFO: http server starting:4545:21292
+ INFO: request:GET / HTTP/1.1**Host: localhost:4545**User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0**Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8**Accept-Language: en-US,en;q=0.5**Accept-Encoding: gzip, deflate**Connection: keep-alive****:1
+ INFO: SEND:index.html:1
+ INFO: request:GET /scott.jpg HTTP/1.1**Host: localhost:4545**User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0**Accept: */***Accept-Language: en-US,en;q=0.5**Accept-Encoding: gzip, deflate**Referer: http://localhost:4545/**Connection: keep-alive****:2
+SORRY: failed to open file:scott.jpg
+ INFO: request:GET /favicon.ico HTTP/1.1**Host: localhost:4545**User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0**Accept: */***Accept-Language: en-US,en;q=0.5**Accept-Encoding: gzip, deflate**Connection: keep-alive****:3
+SORRY: file extension type not supported:GET /favicon.ico
+ INFO: request:GET /favicon.ico HTTP/1.1**Host: localhost:4545**User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0**Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8**Accept-Language: en-US,en;q=0.5**Accept-Encoding: gzip, deflate**Connection: keep-alive****:4
+SORRY: file extension type not supported:GET /favicon.ico
+ INFO: request:GET /page2.html HTTP/1.1**Host: localhost:4545**User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0**Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8**Accept-Language: en-US,en;q=0.5**Accept-Encoding: gzip, deflate**Connection: keep-alive****:5
+ INFO: SEND:page2.html:5
+ INFO: request:GET /page2.html HTTP/1.1**Host: localhost:4545**User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0**Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8**Accept-Language: en-US,en;q=0.5**Accept-Encoding: gzip, deflate**Connection: keep-alive****:6
+ INFO: SEND:page2.html:6
