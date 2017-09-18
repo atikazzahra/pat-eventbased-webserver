@@ -95,6 +95,5 @@ Pada percobaan ini, telah disediakan file untuk serving yaitu pada folder html y
 
 ## Referensi
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* http://codefundas.blogspot.co.id/2010/09/create-tcp-echo-server-using-libev.html
+* https://github.com/labcoder/simple-webserver
