@@ -12,11 +12,8 @@ int main(int argc, char **argv){
 	char buffer[BUFFER_SIZE] = "";
 	
 	if( argc < 2  || argc > 2 || !strcmp(argv[1], "-?") ) {
-		(void)printf("usage: server [port] [server directory] &"
-		"\tExample: server 80 ./ &\n\n"
-		"\tOnly Supports HTML");
+		(void)printf("usage: client [port]");
 
-		(void)printf("\n\tNot Supported: directories / /etc /bin /lib /tmp /usr /dev /sbin \n");
 		exit(0);
 	}
 	
