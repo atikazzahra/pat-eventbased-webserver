@@ -28,7 +28,7 @@ Sedangkan untuk mengukur memory usage, dilakukan monitoring memory usage secara 
 
 ## Hasil Percobaan
 
-Percobaan dilakukan pada lingkungan Ubuntu
+Percobaan dilakukan pada lingkungan Ubuntu menggunakan dua laptop. Laptop pertama bertugas sebagai server dan laptop kedua bertugas sebagai pengirim request. Memory usage diukur pada lingkungan server yaitu pada laptop pertama.
 
 ### Apache2
 
@@ -36,6 +36,8 @@ Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 500 b
 
 ![alt text](image/500kbapache.png)
 ![alt text](image/500b-apache.png)
+
+Didapatkan bahwa rata-rata respons setiap request adalah sebesar 2210 ms dan Memory usage yang digunakan proses yang dibangkitkan oleh web server Apache untuk melayani setiap requestnya 0.2 % dari total memory.
 
 
 Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
@@ -95,5 +97,6 @@ Pada percobaan ini, telah disediakan file untuk serving yaitu pada folder html y
 
 ## Referensi
 
-* http://codefundas.blogspot.co.id/2010/09/create-tcp-echo-server-using-libev.html
-* https://github.com/labcoder/simple-webserver
+* Hat tip to anyone who's code was used
+* Inspiration
+* etc
