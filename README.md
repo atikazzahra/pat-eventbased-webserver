@@ -32,7 +32,7 @@ Percobaan dilakukan pada lingkungan Ubuntu menggunakan dua laptop. Laptop pertam
 
 ### Apache2
 
-Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 500 bytes:
+* Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 500 bytes:
 
 ![alt text](image/500kbapache.png)
 ![alt text](image/500b-apache.png)
@@ -40,31 +40,31 @@ Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 500 b
 Didapatkan bahwa rata-rata respons setiap request adalah sebesar 2210 ms dan Memory usage yang digunakan proses yang dibangkitkan oleh web server Apache untuk melayani setiap requestnya 0.2 % dari total memory.
 
 
-Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
+* Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
 
 ![alt text](image/20kbapache.png)
 ![alt text](image/20kb-apache.png)
 
 ### Nginx
 
-Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 500 bytes:
+* Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 500 bytes:
 
 ![alt text](image/500bnginx.png)
 ![alt text](image/500b-nginx.png)
 
-Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
+* Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
 
 ![alt text](image/20kbnginx.png)
 ![alt text](image/20kb-nginx.png)
 
 ### Simple Event-based Web Server 
 
-Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 500 bytes:
+* Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 500 bytes:
 
 ![alt text](image/500blibev.png)
 ![alt text](image/500b-libev.png)
 
-Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
+* Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
 
 ![alt text](image/20kblibev2.png)
 ![alt text](image/20kb-libev.png)
