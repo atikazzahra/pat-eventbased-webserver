@@ -31,9 +31,11 @@ Percobaan dilakukan pada lingkungan Ubuntu
 ### Apache2
 
 Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 500 bytes:
+![alt text](image/500b-apache.png)
 
 
 Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
+![alt text](image/20kb-apache.png)
 
 ### Nginx
 
@@ -73,7 +75,7 @@ Pada percobaan ini, telah disediakan file untuk serving yaitu pada folder html y
 
 ## Oleh
 
-* Billie Thompson - 13514045
+* Elvina R. K. Situmorang - 13514045
 * Atika Azzahra Akbar - 13514077
 
 ## Referensi
