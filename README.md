@@ -24,6 +24,8 @@ Maka untuk melakukan pengukuran kinerja pelayanan 10.000 request konkuren Apaceh
 ab -n 10000 -c 10000 http[s]://]hostname[:port]/path
 ```
 
+Sedangkan untuk mengukur memory usage, dilakukan monitoring memory usage secara real time menggunakan htop pada lingkungan server.
+
 ## Hasil Percobaan
 
 Percobaan dilakukan pada lingkungan Ubuntu
@@ -45,7 +47,7 @@ Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 ki
 
 Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 500 bytes:
 
-![alt text](image/500kbnginx.png)
+![alt text](image/500bnginx.png)
 ![alt text](image/500b-nginx.png)
 
 Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
