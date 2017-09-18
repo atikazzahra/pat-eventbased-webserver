@@ -58,12 +58,12 @@ Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 ki
 Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 500 bytes:
 
 ![alt text](image/500blibev.png)
-![alt text](image/500kb-libev.png)
+![alt text](image/500b-libev.png)
 
 Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
 
 ![alt text](image/20kblibev2.png)
-![alt text](image/20kb-apache.png)
+![alt text](image/20kb-libev.png)
 
 ## Instalasi dan Cara Penggunaan Simple Event-based Web Server 
 
