@@ -32,37 +32,37 @@ Percobaan dilakukan pada lingkungan Ubuntu
 
 Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 500 bytes:
 
-![alt text](image/500kb apache.png)
+![alt text](image/500kbapache.png)
 ![alt text](image/500b-apache.png)
 
 
 Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
 
-![alt text](image/20kb apache.png)
+![alt text](image/20kbapache.png)
 ![alt text](image/20kb-apache.png)
 
 ### Nginx
 
 Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 500 bytes:
 
-![alt text](image/500kb nginx.png)
+![alt text](image/500kbnginx.png)
 ![alt text](image/500b-nginx.png)
 
 Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
 
-![alt text](image/20kb apache.png)
+![alt text](image/20kbapache.png)
 ![alt text](image/20kb-apache.png)
 
 ### Simple Event-based Web Server 
 
 Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 500 bytes:
 
-![alt text](image/500b libev.png)
+![alt text](image/500blibev.png)
 ![alt text](image/500kb-libev.png)
 
 Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
 
-![alt text](image/20kb libev2.png)
+![alt text](image/20kblibev2.png)
 ![alt text](image/20kb-apache.png)
 
 ## Instalasi dan Cara Penggunaan Simple Event-based Web Server 
