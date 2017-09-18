@@ -2,7 +2,7 @@
 
 ## Mengukur Kinerja Web Server
 
-Pada tugas ini dilakukan dua percobaan yaitu melakukan 10.000 request konkuren sebuah dokumen HTML berukuran kurang lebih 500 bytes, dan dokumen HTML berukuran kurang lebih 20 KB. Percobaan dilakukan pada dua jenis server yaitu Web server Apache dan Web Server Nginx.
+Pada tugas ini dilakukan dua percobaan yaitu melakukan 10.000 request konkuren sebuah dokumen HTML berukuran kurang lebih 500 bytes, dan dokumen HTML berukuran kurang lebih 20 KB. Percobaan dilakukan pada tiga jenis server yaitu Web server Apache, Web Server Nginx, dan Web Server sederhana dengan pendekatan event-based.
 
 ### Tool Benchmark
 
@@ -32,48 +32,51 @@ Percobaan dilakukan pada lingkungan Ubuntu
 
 Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 500 bytes:
 
-```
-Give an example
-```
+
 Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
 
-### And coding style tests
+### Nginx
 
-Explain what these tests test and why
+Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 500 bytes:
+
+
+Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
+
+
+### Simple Event-based Web Server 
+
+Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 500 bytes:
+
+
+Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
+
+## Instalasi dan Cara Penggunaan Simple Event-based Web Server 
+
+Simple Event-based Web Server dibangun dengan bahasa C menggunakan socket dan library libev. Untuk percobaan ini, server hanya dapat menerima request file dengan extension HTML.
+
+Kompilasi program dengan menjalankan Makefile
 
 ```
-Give an example
+make
+``` 
+Untuk menjalankan server
+
+```
+./server [port] [lokasi file html] [& - menjalankan server sebagai background process]
 ```
 
-## Deployment
+Pada percobaan ini, telah disediakan file untuk serving yaitu pada folder html yang berisi dua file HTML berukuran 500 bytes (index.html) dan 20kb (index2.html) sehingga pada defaultnya server dijalankan seperti berikut:
 
-Add additional notes about how to deploy this on a live system
+```
+./server [port] ./html [& - menjalankan server sebagai background process]
+```
 
-## Built With
+## Oleh
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* Billie Thompson - 13514045
+* Atika Azzahra Akbar - 13514077
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
+## Referensi
 
 * Hat tip to anyone who's code was used
 * Inspiration
