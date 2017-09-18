@@ -37,7 +37,7 @@ Percobaan dilakukan pada lingkungan Ubuntu menggunakan dua laptop. Laptop pertam
 ![alt text](image/500kbapache.png)
 ![alt text](image/500b-apache.png)
 
-Didapatkan bahwa rata-rata respons setiap request adalah sebesar 2210 ms dan Memory usage yang digunakan proses yang dibangkitkan oleh web server Apache untuk melayani setiap requestnya 0.2 % dari total memory.
+Didapatkan bahwa rata-rata respons setiap request adalah sebesar 2210 ms dan Memory usage proses yang dibangkitkan oleh web server Apache untuk melayani setiap requestnya adalah sebesar 0.2 % dari total memory.
 
 
 * Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
