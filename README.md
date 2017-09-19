@@ -37,13 +37,16 @@ Percobaan dilakukan pada lingkungan Ubuntu menggunakan dua laptop. Laptop pertam
 ![alt text](image/500kbapache.png)
 ![alt text](image/500b-apache.png)
 
-Didapatkan bahwa rata-rata respons setiap request adalah sebesar 2210 ms dan Memory usage proses yang dibangkitkan oleh web server Apache untuk melayani setiap requestnya adalah sebesar 0.2 % dari total memory.
+Didapatkan bahwa rata-rata respons setiap request adalah sebesar 18,571 ms dan Memory usage proses yang dibangkitkan oleh web server Apache untuk melayani setiap requestnya adalah sebesar 0.2 % dari total memory.
 
 
 * Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
 
 ![alt text](image/20kbapache.png)
 ![alt text](image/20kb-apache.png)
+
+Didapatkan bahwa rata-rata respons setiap request adalah sebesar 56,289 ms dan Memory usage proses yang dibangkitkan oleh web server Apache untuk melayani setiap requestnya adalah sebesar 0.2 % dari total memory.
+
 
 ### Nginx
 
@@ -52,10 +55,16 @@ Didapatkan bahwa rata-rata respons setiap request adalah sebesar 2210 ms dan Mem
 ![alt text](image/500bnginx.png)
 ![alt text](image/500b-nginx.png)
 
+Didapatkan bahwa rata-rata respons setiap request adalah sebesar 7,502 ms dan Memory usage proses yang dibangkitkan oleh web server Apache untuk melayani setiap requestnya adalah sebesar 0.1 % dari total memory.
+
+
 * Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
 
 ![alt text](image/20kbnginx.png)
 ![alt text](image/20kb-nginx.png)
+
+Didapatkan bahwa rata-rata respons setiap request adalah sebesar 92,689 ms dan Memory usage proses yang dibangkitkan oleh web server Apache untuk melayani setiap requestnya adalah sebesar 0.1 % dari total memory.
+
 
 ### Simple Event-based Web Server 
 
@@ -64,10 +73,16 @@ Didapatkan bahwa rata-rata respons setiap request adalah sebesar 2210 ms dan Mem
 ![alt text](image/500blibev.png)
 ![alt text](image/500b-libev.png)
 
+Didapatkan bahwa rata-rata respons setiap request adalah sebesar 55,653 ms dan Memory usage proses yang dibangkitkan oleh web server Apache untuk melayani setiap requestnya adalah sebesar 12.4 % dari total memory.
+
+
 * Berikut adalah hasil yang didapatkan saat mengakses dokumen HTML berukuran 20 kilobytes:
 
 ![alt text](image/20kblibev2.png)
 ![alt text](image/20kb-libev.png)
+
+Didapatkan bahwa rata-rata respons setiap request adalah sebesar 129,191 ms dan Memory usage proses yang dibangkitkan oleh web server Apache untuk melayani setiap requestnya adalah sebesar 12.4 % dari total memory.
+
 
 ## Instalasi dan Cara Penggunaan Simple Event-based Web Server 
 
